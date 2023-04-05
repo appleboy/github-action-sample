@@ -2,8 +2,8 @@ name: 'GitHub Action Sample'
 description: 'GitHub Action Sample'
 author: 'Bo-Yi Wu'
 inputs:
-  openai_api_key:
-    description: 'OpenAI API Key'
+  github_token:
+    description: 'github token'
     default: ''
 
 runs:

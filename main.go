@@ -14,7 +14,7 @@ import (
 func main() {
 	ctx := context.Background()
 	ts := oauth2.StaticTokenSource(
-		&oauth2.Token{AccessToken: os.Getenv("GITHUB_TOKEN")},
+		&oauth2.Token{AccessToken: os.Getenv("INPUT_GITHUB_TOKEN")},
 	)
 	tc := &http.Client{
 		Transport: &oauth2.Transport{
