@@ -27,15 +27,14 @@ jobs:
 
   testing:
     runs-on: ubuntu-latest
-    container: golang:1.19-alpine
+    container: golang:1.20-alpine
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: setup sshd server
+      - name: setup server
         run: |
-          apk add git make curl perl bash build-base zlib-dev ucl-dev
-          make ssh-server
+          apk add git make
 
       - name: testing
         run: |
