@@ -1,6 +1,11 @@
 name: Integration Test
 
-on: [push]
+on:
+  workflow_run:
+    workflows: ["Docker Image"]
+    branches: [main]
+    types:
+      - completed
 
 jobs:
   build:
