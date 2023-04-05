@@ -13,3 +13,5 @@ jobs:
 
     - name: GitHub SDK Sample
       uses: ./
+      env: # Or as an environment variable
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
